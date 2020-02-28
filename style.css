@@ -84,11 +84,11 @@ body {
  
      .slider__control_left {
        left: 0;
-       background: url(left.svg) no-repeat center center;
+       background: url(img/left.svg) no-repeat center center;
      }
      .slider__control_right {
        right: 0;  
-       background: url(right.svg) no-repeat center center;     
+       background: url(img/right.svg) no-repeat center center;     
      }
  
      .slider__img {

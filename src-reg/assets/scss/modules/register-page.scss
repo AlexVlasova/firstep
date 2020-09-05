@@ -1,0 +1,87 @@
+.register-page {
+    background-color: #FBFBFB;
+}
+.register-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.register-header {
+    img {
+        display: block;
+        margin: 15px auto;
+    }
+}
+
+.register-chat {
+    display: flex;
+    flex-direction: column;
+}
+.message {
+    display: inline-block;
+    max-width: 300px;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: -0.016em;
+}
+.message-gray {
+    align-self: flex-start;
+    background-color: #ECECEC;
+    border-radius: 16px;
+    margin-bottom: 8px;
+    padding: 10px 20px;
+    
+    color: #484848;
+}
+.message-pink {
+    align-self: flex-end;
+    background-color: #FF6D83;
+    border-radius: 16px;
+    margin-bottom: 8px;
+    padding: 10px 20px;
+
+    color: white;
+}
+.phone-btn {
+    margin-top: 32px;
+    margin-bottom: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    width: 333px;
+    height: 65px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 17px;
+
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #484848;
+
+    img {
+        margin-right: 23px;
+    }
+}
+.fb-btn {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    width: 333px;
+    height: 65px;
+    background: #007AFF;
+    box-shadow: 0px 0px 2px #007AFF;
+    border-radius: 17px;
+
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #FFFFFF;
+
+    img {
+        margin-right: 23px;
+    }
+}

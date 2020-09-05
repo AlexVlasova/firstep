@@ -1,0 +1,21 @@
+doctype html
+html(lang='ru')
+  head
+    meta(charset='utf-8')
+    title Firstep
+    meta(name="description", content='Personal page of the Firstep website')
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="shortcut icon", href="/static/favicon.ico", type="image/x-icon")
+    link(rel="stylesheet", href="/assets/css/main.css")
+
+  body(class='main-page')
+    aside.personal-info
+      include ./blocks/photo-name/photo-name
+      include ./blocks/switcher/switcher
+      include ./blocks/messages/messages
+    main.other-persons
+      include ./blocks/header/header
+      .card-container
+        include ./blocks/person-card/person-card
+    script(src="/js/main.js")
+    script(src="/js/vendors.js")

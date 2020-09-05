@@ -1,0 +1,15 @@
+.empty-messages {
+    max-width: 220px;
+
+    &__img {
+        margin-top: 128px;
+        text-align: center;
+    }
+    &__text {
+        text-align: center;
+        font-size: 15px;
+        line-height: 16px;
+        letter-spacing: -0.00615385em;
+        color: #626161;
+    }
+}

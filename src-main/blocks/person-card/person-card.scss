@@ -3,7 +3,7 @@
 .person-card {
     &__container {
         display: flex;
-        width: 882px;
+        width: 782px;
         height: 552px;
     }
     &__photo {
@@ -49,10 +49,24 @@
         }
     }
     &__descr {
+        position: relative;
         padding: 25px 20px;
         width: 336px;
         background-color: rgba(255, 120, 61, 0.29);
         border-radius: 0px 18px 18px 0px;
+
+        .btn-flag {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background-color: #F2EFEF;
+            background-image: url('/assets/img/flag.svg');
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
     }
 
     &__name {
@@ -93,6 +107,7 @@
 
     &__nav {
         position: relative;
+        display: flex;
         margin-top: -28px;
         z-index: 10;
 
@@ -117,13 +132,27 @@
             }
         }
         .nav-btns {
-
+            display: flex;
         }
         .nav-prev {
-
+            height: 55px;
+            width: 55px;
+            margin-left: 227px;
+            background-color: #F2EFEF;
+            background-image: url('/assets/img/btn-arr.svg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            border-radius: 50%;
         }
         .nav-cancel {
-
+            height: 55px;
+            width: 55px;
+            margin-left: 18px;
+            background-color: #F2EFEF;
+            background-image: url('/assets/img/btn-cross.svg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            border-radius: 50%;
         }
     }
 }

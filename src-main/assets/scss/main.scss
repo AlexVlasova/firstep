@@ -43,6 +43,10 @@ h2 {
   line-height: 20px;
 } 
 
+.hide {
+  display: none;
+}
+
 // Modules
 @import "../../blocks/photo-name/photo-name";
 @import "../../blocks/switcher/switcher";
@@ -52,6 +56,7 @@ h2 {
 @import "../../blocks/person-card/person-card";
 @import "../../blocks/message-aside/message-aside";
 @import "../../blocks/invite-aside/invite-aside";
+@import "../../blocks/invites/invites";
 
 // Pages
 @import "../../assets/scss/modules/main-page.scss";

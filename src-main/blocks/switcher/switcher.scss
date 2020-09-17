@@ -3,6 +3,7 @@
     background-color: #F2F6FB;
     padding: 2px;
     border-radius: 12px;
+    cursor: pointer;
 
     &__item {
         display: flex;
@@ -20,7 +21,7 @@
         flex-grow: 1;
     }
 
-    .swith-checked {
+    .switch-checked {
         background-color: #fff;
         font-weight: 600;
         font-size: 16px;

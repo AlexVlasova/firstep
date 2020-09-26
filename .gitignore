@@ -5,7 +5,7 @@
 .jshintrc
 
 package-lock.json
-
+webpack.dev.conf.js
 # Node
 node_modules
 dist

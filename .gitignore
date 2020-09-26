@@ -4,6 +4,8 @@
 .vscode
 .jshintrc
 
+package-lock.json
+
 # Node
 node_modules
 dist

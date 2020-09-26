@@ -24,7 +24,9 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       // С этой настройкой все запросы, содержащие '/api' будут переводиться с
       // 'http://mysite.test:8081 на http://mysite.test
       '/api': {
-        target: 'http://firstep.love',
+        target: 'https://api.firstep.love:12001',
+        changeOrigin: true,
+        pathRewrite: { '^/api': '' }
       }
     },
   },

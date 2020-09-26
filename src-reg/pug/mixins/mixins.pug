@@ -1,7 +1,7 @@
-mixin message-gray(text)
-    .message-gray
+mixin message-gray(type, text)
+    div(class="message-gray "+ type)
         .message= text
 
-mixin message-pink(text)
-    .message-pink
+mixin message-pink(type, text)
+    div(class="message-pink "+ type)
         .message= text

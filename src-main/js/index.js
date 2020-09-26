@@ -5,4 +5,5 @@
 import '../blocks/photo-slider/sly.min.js';
 import '../blocks/photo-slider/slider.js';
 import '../blocks/person-card/person-card.js';
+import '../blocks/person-card/invite-place.js';
 import '../blocks/switcher/switcher.js';

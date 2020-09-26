@@ -30,8 +30,11 @@ mixin place-btn(name)
                     img(src="/assets/img/icon-height.svg", alt="")
                     p 171
             .btn-flag
+        div(class="person-card__invite-done hide")
+            img(src="/assets/img/invite-done.svg", alt="")
+            p Ваше приглашение отправлено
     .person-card__nav
-        button.nav-invite Пригласить
+        button(class="nav-invite" disabled) Пригласить
         .nav-btns
             .nav-prev
             .nav-cancel

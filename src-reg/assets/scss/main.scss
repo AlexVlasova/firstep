@@ -43,13 +43,12 @@ h2 {
   line-height: 20px;
 } 
 
-// Modules
-// @import "../../blocks/photo-name/photo-name";
-// @import "../../blocks/switcher/switcher";
-// @import "../../blocks/messages/messages";
-// @import "../../blocks/filters/filters";
-// @import "../../blocks/header/header";
-// @import "../../blocks/person-card/person-card";
-
 // Pages
-@import "../../assets/scss/modules/register-page.scss";
+@import "../../assets/scss/modules/register-page";
+// @import "../../blocks/phone-number/intlTelInput.scss";
+// @import '../../../node_modules/intl-tel-input/build/css/intlTelInput.css';
+@import "../../blocks/code-input/code-input";
+
+.hide {
+  display: none;
+}

@@ -30,7 +30,8 @@ let cursorTarget;
 // Как только курсор заходит на слайдер, начинает выполняться функция анализа курсора
 photoSlider.addEventListener('mouseover', (event) => {
     cursorTarget = event.target.closest('li');
-    cursorRepeat = setTimeout(chooseCursor, 100, cursorTarget);
+    cursorRepeat = setTimeout(chooseCursor, 100);
+    // cursorRepeat = setInterval(chooseCursor, 100);
 });
 
 // Как только курсор уходит с элемента, устанавливаем дефолтные значения ? и останавливаем повторение
@@ -41,8 +42,11 @@ photoSlider.addEventListener('mouseout', () => {
 // const photoContainer = document.querySelector('.person-card__photo');
 
 // На вход подается положение курсора, само событие
-function chooseCursor (target) {
+function chooseCursor () {
+    // Когда все одно и то же, функция ничего не делает, поэтому некорректно работает
+    // console.log(); - не работает нормально без этого
     // Переменная, отвечающая за вид курсора сейчас
+    console.log();
     let positionNew = 'top';
     // Определяем положение верха слайдера
     const sliderTopCoord = photoSlider.getBoundingClientRect().y;
@@ -67,6 +71,6 @@ function chooseCursor (target) {
     if (position !== positionNew) {
         position = positionNew;
         setNewCursor(position);
-    } 
-    cursorRepeat = setTimeout(chooseCursor, 100, cursorTarget);
+    }
+    cursorRepeat = setTimeout(chooseCursor, 100);
 }

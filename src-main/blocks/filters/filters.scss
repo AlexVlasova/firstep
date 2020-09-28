@@ -1,0 +1,14 @@
+.filters {
+    display: flex;
+    align-items: center;
+
+    &__icon {
+        margin-right: 10px;
+    }
+    &__text {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #AAAAAA;
+    }
+}

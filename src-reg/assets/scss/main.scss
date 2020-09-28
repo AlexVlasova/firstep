@@ -1,0 +1,54 @@
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/reset";
+
+html {
+  line-height: $mainLineHeight;
+	font-size: $mainFontSize;
+	color: $mainFontColor;
+  height: 100%;
+  // @media screen and (max-width: $desktopWidth) {
+	// 	font-size: 16px;
+  // }
+  // @media screen and (max-width: $tableWidth) {
+	// 	font-size: 15px;
+  // }
+  // @media screen and (max-width: $phoneWidth) {
+	// 	font-size: 14px;
+  // }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $mainFont;
+  font-size: $mainFontSize;
+  color: $mainFontColor;
+  font-weight: $mainFontWeight;
+  line-height: $mainLineHeight;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 31px;
+  color: $headingColor;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 20px;
+} 
+
+// Pages
+@import "../../assets/scss/modules/register-page";
+// @import "../../blocks/phone-number/intlTelInput.scss";
+// @import '../../../node_modules/intl-tel-input/build/css/intlTelInput.css';
+@import "../../blocks/code-input/code-input";
+
+.hide {
+  display: none;
+}

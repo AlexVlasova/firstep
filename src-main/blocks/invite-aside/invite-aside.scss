@@ -1,0 +1,47 @@
+.invite-aside {
+    display: flex;
+    align-items: center;
+    margin-top: 22px;
+    margin-bottom: 22px;
+
+    &__photo {
+        width: 54px;
+        height: 54px;
+        margin-right: 15px;
+        border-radius: 50%;
+        background-image: url("/assets/img/man.jpg");
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    &__message {
+        flex: 1 0 auto;
+    }
+    &__name {
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 21px;
+        color: #595959;
+    }
+    &__place {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 15px;
+        color: #666666;
+
+        .place-pink {
+            font-weight: 600;
+            color: #FF4D67;
+        }
+    }
+    &__time {
+        display: flex;
+        align-items: center;
+        font-size: 10px;
+        line-height: 21px;
+        color: #888888;
+
+        img {
+            margin-right: 6px;
+        }
+    }
+}

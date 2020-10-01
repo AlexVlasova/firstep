@@ -24,7 +24,7 @@ window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('confirm-phone', 
 // Необходимые поля
 const phoneInput = document.querySelector('input[name="phone"]');
 const codeContainer = document.querySelector('.code-input');
-const codeInput = codeContainer.querySelectorAll('input[name="code"]');
+const codeInput = codeContainer.querySelectorAll('.code-input__number');
 const phoneBtn = document.querySelector('.confirm-phone');
 const confirmElements = document.querySelectorAll('.confirm');
 const personElements = document.querySelectorAll('.person-info');
@@ -63,36 +63,35 @@ phoneBtn.addEventListener('click', () => {
             elem.classList.remove('hide');
         });
         codeContainer.classList.remove('hide');
+        codeInput[0].focus();
 });
 
 let token = '';
 
-codeInput[5].addEventListener('keydown', (event) => {
-    if (event.code === "Enter") {
-        // Return a user object if the authentication was successful, and auth is complete
-        let code = "";
-        codeInput.forEach((elem) => {
-            code += elem.value;
-        });
-        personElements[0].textContent = code;
+codeInput[5].addEventListener('input', (event) => {
+    // Return a user object if the authentication was successful, and auth is complete
+    let code = "";
+    codeInput.forEach((elem) => {
+        code += elem.value;
+    });
+    personElements[0].textContent = code;
 
-        confirmationResult
-            .confirm(code)
-            .then(function(result) {
-                const user = result.user;
-                console.log(user);
+    confirmationResult
+        .confirm(code)
+        .then(function(result) {
+            const user = result.user;
+            console.log(user);
 
-                token = user.refreshToken;
-                console.log(token);
-            })
-            .catch(function(error) {
-                console.log(error);
-            });
-        codeContainer.classList.add('hide');
-        personElements.forEach((elem) => {
-            elem.classList.remove('hide');
+            token = user.refreshToken;
+            console.log(token);
+        })
+        .catch(function(error) {
+            console.log(error);
         });
-    }
+    codeContainer.classList.add('hide');
+    personElements.forEach((elem) => {
+        elem.classList.remove('hide');
+    });
 });
 
 const fbBtn = document.querySelector('.fb-btn');
@@ -108,8 +107,8 @@ fbBtn.addEventListener('click', (event) => {
             var token = result.credential.accessToken;
             var user = result.user;
             
-            console.log(token)
-            console.log(user)
+            console.log(token);
+            console.log(user);
         }).catch(function(error) {
             console.log(error.code);
             console.log(error.message);

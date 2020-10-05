@@ -25,7 +25,8 @@ html(lang='ru')
                 p Facebook
             +message-pink('phone hide', 'По номеру телефона')
             +message-gray('phone hide', 'Введи свой номер телефона')
-            input(type="tel" name="phone" class="phone phone-input hide" placeholder="Введи номер телефона")
+            div(class="phone-input phone hide")
+              input(type="tel" id="phone" name="phone" class="phone phone-input hide" placeholder="Введи номер телефона" autocomplete="off")
             button(class="phone confirm-phone hide" id="confirm-phone") Подтвердить
             +message-pink('confirm hide', '+7 905-205-65-66')
             +message-gray('confirm hide', 'Сейчас на твой номер придет код, введи его в поле ниже')
@@ -37,8 +38,16 @@ html(lang='ru')
     script(src="https://www.gstatic.com/firebasejs/7.18.0/firebase-analytics.js")
     script(src="https://www.gstatic.com/firebasejs/7.18.0/firebase-auth.js")
 
-    script
-      include ./js/init-facebook.js
-
     script(defer src="/js/reg.js")
     script(defer src="/js/vendors.js")
+
+    script(defer)
+      include ./js/init-facebook.js
+
+    script(defer)
+      include ../node_modules/intl-tel-input/build/js/intlTelInput.js
+
+    script(defer)
+      include ./blocks/phone-number/phoneInputInit.js
+
+    

@@ -20,6 +20,9 @@ html(lang='ru')
         include ./blocks/person-card/person-card
     div(class="chat-container")
       include ./blocks/chat/chat
-      include ./blocks/profile/profile
+      .aside-container
+        button.close-btn
+        .profile-container
+          include ./blocks/profile/profile
     script(defer src="/js/main.js")
     script(defer src="/js/vendors.js")

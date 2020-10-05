@@ -14,9 +14,12 @@ html(lang='ru')
       include ./blocks/switcher/switcher
       include ./blocks/messages/messages
       include ./blocks/invites/invites
-    main.other-persons
+    div(class="other-persons hide")
       include ./blocks/header/header
       .card-container
         include ./blocks/person-card/person-card
+    div(class="chat-container")
+      include ./blocks/chat/chat
+      include ./blocks/profile/profile
     script(defer src="/js/main.js")
     script(defer src="/js/vendors.js")

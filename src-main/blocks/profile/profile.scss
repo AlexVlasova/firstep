@@ -1,0 +1,81 @@
+.close-btn {
+    background-color: #ACB4BE;
+    background-image: url('/assets/img/btn-white-cross.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+.profile {
+    height: 100vh;
+    overflow: hidden;
+    overflow-y: initial;
+    position: relative;
+
+    background-color: #FCD5C4;
+    flex: 0 0 290px;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #4B4B4B;
+
+    .close-btn {
+        position: absolute;
+        right: 22px;
+        top: 15px;
+    }
+
+    .text {
+        padding: 15px 20px 20px;
+    }
+
+    &__name {
+        margin-bottom: 10px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        color: #2E2D2D;
+    }
+    .about {
+        margin-bottom: 10px;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 18px;
+        color: #363636;
+    }
+
+    &__info {
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            img {
+                margin-right: 20px;
+            }
+        }
+    }
+    .fav {
+        .heading {
+            margin-bottom: 10px;
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 18px;
+            color: #363636;
+        }
+
+        .place {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 26px;
+            color: rgba(0, 0, 0, 0.8);
+        }
+    }
+}

@@ -10,7 +10,6 @@ phoneBtn.addEventListener('click', (event) => {
     fbBtn.classList.add('hide');
 
     phoneElements.forEach((elem) => {
-        // Сделать через remove hide (сначала добавить сам класс)
         elem.classList.remove('hide');
     });
 });
@@ -23,8 +22,3 @@ fbBtn.addEventListener('click', (event) => {
 
     console.log('fb Clicked');
 });
-
-// const phoneInput = document.querySelector("#demo");
-// window.intlTelInput(phoneInput, {
-//     // any initialisation options go here
-// });

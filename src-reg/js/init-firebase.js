@@ -22,7 +22,8 @@ window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('confirm-phone', 
 });  
 
 // Необходимые поля
-const phoneInput = document.querySelector('input[name="phone"]');
+const phone = document.querySelector('.phone-input');
+const phoneInput = phone.querySelector('.iti');
 const codeContainer = document.querySelector('.code-input');
 const codeInput = codeContainer.querySelectorAll('.code-input__number');
 const phoneBtn = document.querySelector('.confirm-phone');
@@ -30,7 +31,12 @@ const confirmElements = document.querySelectorAll('.confirm');
 const personElements = document.querySelectorAll('.person-info');
 
 phoneBtn.addEventListener('click', () => {
-    let phoneNumber = phoneInput.value;
+    const phoneCode = phoneInput.querySelector('.iti__selected-dial-code'); 
+    const phonePart = phoneInput.querySelector('.phone-input');
+    console.log(phoneCode.textContent);
+    console.log(phonePart.value);
+
+    let phoneNumber = phoneCode.textContent + phonePart.value;
     console.log(phoneNumber);
 
     // phoneNumber = '+79998888080';

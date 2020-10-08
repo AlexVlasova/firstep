@@ -1,3 +1,4 @@
+// Крестик профиля
 const profile = document.querySelector('.aside-container');
 const closeProfileBtn = profile.querySelector('.close-btn');
 

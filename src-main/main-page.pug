@@ -14,11 +14,11 @@ html(lang='ru')
       include ./blocks/switcher/switcher
       include ./blocks/messages/messages
       include ./blocks/invites/invites
-    div(class="other-persons hide")
+    div(class="other-persons")
       include ./blocks/header/header
       .card-container
         include ./blocks/person-card/person-card
-    div(class="chat-container")
+    div(class="chat-container hide")
       include ./blocks/chat/chat
       .aside-container
         button.close-btn

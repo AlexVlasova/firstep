@@ -1,8 +1,16 @@
+.active {
+    background-color: rgba(252, 213, 196, 0.4);
+}
+
 .message-aside {
+    cursor: pointer;
     display: flex;
     align-items: center;
-    margin-top: 22px;
-    margin-bottom: 22px;
+    padding: 11px 20px;
+
+    &:hover {
+        background-color: rgba(252, 213, 196, 0.4);
+    }
 
     &__photo {
         width: 48px;

@@ -1,4 +1,5 @@
 const inputs = document.querySelectorAll('.code-input__number');
+inputs[0].focus();
 
 inputs.forEach(elem => {
     elem.addEventListener('keyup', (event) => {

@@ -68,8 +68,8 @@ phoneBtn.addEventListener('click', () => {
         confirmElements.forEach((elem) => {
             elem.classList.remove('hide');
         });
-        codeContainer.classList.remove('hide');
         codeInput[0].focus();
+        codeContainer.classList.remove('hide');
 });
 
 let token = '';

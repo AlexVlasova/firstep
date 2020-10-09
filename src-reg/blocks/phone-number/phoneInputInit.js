@@ -21,3 +21,4 @@ let input = document.querySelector("#phone");
       preferredCountries: ['ru', 'fr'],
       separateDialCode: true,
     });
+

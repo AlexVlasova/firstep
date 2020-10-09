@@ -14,6 +14,9 @@ const closeChatBtn = chat.querySelector('.close-btn');
 closeChatBtn.addEventListener('click', () => {
     chat.classList.add('hide');
     personCard.classList.remove('hide');
+    messagesLinks.forEach(elem => {
+        elem.classList.remove('active');
+    });
 });
 
 

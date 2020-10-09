@@ -98,10 +98,6 @@ $mobilePopupMargin: 30px !default;
     background-repeat: no-repeat;
     background-position: center center;
     margin-left: 3px;
-
-    &--up {
-      transform: rotate(180deg);
-    }
   }
 
   
@@ -280,3 +276,4 @@ $mobilePopupMargin: 30px !default;
 .iti__flag.iti__np {
   background-color: transparent;
 }
+

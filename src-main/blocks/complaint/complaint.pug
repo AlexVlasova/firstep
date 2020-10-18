@@ -1,0 +1,30 @@
+div(class="complaint hide")
+    .complaint__container 
+        .close-btn
+        .complaint__top
+            .complaint__heading Этот пользователь нарушает правила приложения или с ним что то не так?
+            .complaint__text Мы сможем сделать Firstep. Расскажите нам о&nbsp;причине жалобы или блокировки этой анкеты. Ваш ответ останется анонимным 
+            .checkboxes
+                .checkbox
+                    label.custom-checkbox
+                        input(type="checkbox", value="wrong photos", name="complaint_1")
+                        span Чужие фото
+                .checkbox
+                    label.custom-checkbox
+                        input(type="checkbox", value="span/advert", name="complaint_2")
+                        span Спам/реклама
+                .checkbox
+                    label.custom-checkbox
+                        input(type="checkbox", value="wrong words", name="complaint_3")
+                        span Оскорбительное поведение
+                .checkbox
+                    label.custom-checkbox
+                        input(type="checkbox", value="wrong content", name="complaint_4")
+                        span Неуместный контент
+                .checkbox
+                    label.custom-checkbox
+                        input(type="checkbox", value="other", name="complaint_5")
+                        span Другое
+            textarea(class="hide slidee" autofocus placeholder="Напишите сюда подробное описание вашей жалобы на анкету.")
+        .comlaint__bottom
+            button(class="send-complaint" disabled) Отправить

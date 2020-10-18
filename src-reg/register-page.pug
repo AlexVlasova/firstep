@@ -23,16 +23,16 @@ html(lang='ru')
             button.fb-btn 
                 img(src="/assets/img/icon-fb.svg", alt="")
                 p Facebook
-            +message-pink('phone hide', 'По номеру телефона')
-            +message-gray('phone hide', 'Введи свой номер телефона')
-            div(class="phone-input phone hide")
-              input(type="tel" id="phone" name="phone" class="phone phone-input hide" placeholder="Введи номер телефона" autocomplete="off")
-            button(class="phone confirm-phone hide" id="confirm-phone") Подтвердить
-            +message-pink('confirm hide', '+7 905-205-65-66')
-            +message-gray('confirm hide', 'Сейчас на твой номер придет код, введи его в поле ниже')
+            +message-pink('phone ', 'По номеру телефона')
+            +message-gray('phone ', 'Введи свой номер телефона')
+            div(class="phone-input phone ")
+              input(type="tel" id="phone" name="phone" class="phone phone-input " placeholder="Введи номер телефона" autocomplete="off")
+            button(class="phone confirm-phone " id="confirm-phone") Подтвердить
+            +message-pink('confirm ', '+7 905-205-65-66')
+            +message-gray('confirm ', 'Сейчас на твой номер придет код, введи его в поле ниже')
             include ./blocks/code-input/code-input
-            +message-pink('person-info hide', '')
-            +message-gray('person-info hide', 'А теперь познакомимся. Напиши свое имя')
+            +message-pink('person-info ', '111111')
+            +message-gray('person-info ', 'А теперь познакомимся. Напиши свое имя')
 
     script(src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js")
     script(src="https://www.gstatic.com/firebasejs/7.18.0/firebase-analytics.js")

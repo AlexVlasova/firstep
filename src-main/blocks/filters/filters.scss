@@ -1,4 +1,6 @@
 .filters {
+    cursor: pointer;
+    position: relative;
     display: flex;
     align-items: center;
 
@@ -10,5 +12,27 @@
         font-size: 16px;
         line-height: 19px;
         color: #AAAAAA;
+    }
+    .active {
+        color: #FF4D67;
+        background-color: inherit;
+    }
+    &__container {
+        position: absolute;
+        width: 370px;
+        height: 350px;
+        background-color: red;
+        top: 38px;
+        z-index: 5;
+
+        &::before {
+            content: '';
+            width: 25px;
+            height: 25px;
+            background-color: yellow;
+            position: absolute;
+            left: 30px;
+            top: -10px;
+        }
     }
 }

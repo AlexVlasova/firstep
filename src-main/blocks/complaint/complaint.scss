@@ -1,0 +1,163 @@
+.complaint {
+    background: rgba(196, 196, 196, 0.72);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 20;
+
+    &__container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        max-width: 570px;
+        min-height: 450px;
+        margin: 20px;
+        padding: 25px 82px 30px;
+        background-color: #fff;
+        box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.27);
+        border-radius: 27px;
+
+        font-weight: normal;
+        font-size: 16px;
+        color: #484848;
+    }
+    .close-btn {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        width: 21px;
+        height: 21px;
+        background-size: 90%;
+    }
+    &__heading {
+        margin-bottom: 15px;
+
+        font-weight: 600;
+        line-height: 19px;
+        text-align: center;
+        letter-spacing: -0.00615385em;
+    }
+    &__text {
+        margin-bottom: 23px;
+
+        text-align: center;
+        line-height: 19px;
+        letter-spacing: -0.00615385em;
+    }
+    textarea {
+        background-color: #F2F6FB;
+        border-radius: 12px;
+        height: 112px;
+        
+        padding: 10px 15px;
+        width: 100%;
+
+        font-family: 'Raleway', sans-serif;
+        font-size: 14px;
+        line-height: 16px;
+        color: #484848;
+
+        // Удаление обводки
+        outline: none;
+        -moz-appearance: none;
+        //border: 1px solid #999; /* указание этого свойства также удалит обводку в FireFox */
+        resize: none;
+        overflow: auto;
+
+        &::placeholder {
+            color: #9B9B9B;
+        }
+    }
+    .send-complaint {
+        cursor: pointer;
+        display: block;
+        min-width: 180px;
+        margin: 0 auto;
+        padding: 9px 0 11px;
+        background: #FF4D67;
+        border-radius: 13px;
+
+        color: #FFFFFF;
+        line-height: 22px;
+
+        &:disabled {
+            background-color: #D3D3D3;
+            color: #808080; 
+        }
+    }
+
+    .checkbox {
+        margin-bottom: 20px;
+        font-size: 16px;
+        line-height: 18px;
+    }
+    .custom-checkbox {
+        // display: flex;
+        // align-items: center;
+
+        & > input {
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+        }
+        & > span {
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            user-select: none;
+
+            &::before {
+                content: '';
+                // display: inline-block;
+                width: 21px;
+                height: 21px;
+                // flex-shrink: 0;
+                // flex-grow: 0;
+                border: 1.4px solid #878787;
+                border-radius: 6px;
+                margin-right: 14px;
+                background-repeat: no-repeat;
+                background-position: 3px 4px;
+            }
+        }
+    }
+      
+    /* стили при наведении курсора на checkbox */
+    .custom-checkbox>input:not(:disabled):not(:checked)+span:hover::before {
+        border-color: #FF4D67;
+    }
+      
+    /* стили для активного чекбокса (при нажатии на него) */
+    .custom-checkbox>input:not(:disabled):active+span::before {
+        background-color: #FF4D67;
+        border-color: #FF4D67;
+    }
+      
+    /* стили для чекбокса, находящегося в фокусе */
+    // .custom-checkbox>input:focus+span::before {
+    //     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    // }
+      
+    // /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+    // .custom-checkbox>input:focus:not(:checked)+span::before {
+    // border-color: #80bdff;
+    // }
+      
+    /* стили для чекбокса, находящегося в состоянии checked */
+    .custom-checkbox>input:checked+span::before {
+        border-color:#FF4D67;
+        background-color: #FF4D67;
+        background-image: url("/assets/img/check.svg");
+    }
+      
+    /* стили для чекбокса, находящегося в состоянии disabled */
+    .custom-checkbox>input:disabled+span::before {
+        background-color: #e9ecef;
+    }
+}

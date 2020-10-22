@@ -1,5 +1,6 @@
 const complaint = document.querySelector('.complaint');
-const complaintTextarea = complaint.querySelector('textarea');
+const complaintTextarea = complaint.querySelector('.textarea-container');
+const textAreaText = complaintTextarea.querySelector('textarea');
 const complaintSendBtn = complaint.querySelector('.send-complaint');
 const complaintCloseBtn = complaint.querySelector('.close-btn');
 const checkboxContainer = complaint.querySelector('.checkboxes');
@@ -14,7 +15,7 @@ openModalBtn.addEventListener('click', () => {
     // Сбрасываем данные модального окна
     checkboxContainer.classList.remove('hide');
     complaintTextarea.classList.add('hide');
-    complaintTextarea.value = "";
+    textAreaText.value = "";
     complaintCheckboxes.forEach((elem) => {
         let target = elem.querySelector('input');
         target.checked = false;
@@ -81,7 +82,7 @@ complaintSendBtn.addEventListener('click', () => {
         // Спрятиали ненужные окна
         checkboxContainer.classList.add('hide');
         complaintTextarea.classList.remove('hide');
-        complaintTextarea.focus();
+        textAreaText.focus();
         // Поменяли кнопку
         complaintSendBtn.textContent = textBtnSend;
         complaintSendBtn.disabled = true;
@@ -107,12 +108,10 @@ complaintSendBtn.addEventListener('click', () => {
 
 // Разблокируем кнопку при вводе текста
 complaintTextarea.addEventListener('input', () => {
-    const value = complaintTextarea.value;
+    const value = textAreaText.value;
     if (value !== "") {
         complaintSendBtn.disabled = false;
     } else {
         complaintSendBtn.disabled = true;
     }
 });
-
-// Скроллинг при длинной жалобе

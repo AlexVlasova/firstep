@@ -9,7 +9,8 @@ html(lang='ru')
     link(rel="stylesheet", href="/assets/css/main.css")
 
   body(class='main-page')
-    aside.personal-info
+    include ./blocks/no-internet/no-internet
+    aside(class="personal-info")
       include ./blocks/photo-name/photo-name
       include ./blocks/switcher/switcher
       include ./blocks/messages/messages
@@ -18,6 +19,9 @@ html(lang='ru')
       include ./blocks/complaint/complaint
       include ./blocks/header/header
       .card-container
+        div(class="problems-container hide")
+          img(src="/assets/img/problem-man.svg", alt="")
+          p Включите голокацию чтобы увидеть пользователей рядом с вами и знакомиться
         include ./blocks/person-card/person-card
     div(class="chat-container hide")
       include ./blocks/chat/chat
@@ -27,3 +31,7 @@ html(lang='ru')
           include ./blocks/profile/profile
     script(defer src="/js/main.js")
     script(defer src="/js/vendors.js")
+
+    //- script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" crossorigin="anonymous")
+    //- link(rel="stylesheet", href="//cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.min.css")
+    //- script(src="//cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.concat.min.js")

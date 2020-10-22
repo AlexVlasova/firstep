@@ -1,5 +1,6 @@
 .complaint {
     background: rgba(196, 196, 196, 0.72);
+    border-left: 1px solid white;
     position: absolute;
     display: flex;
     justify-content: center;
@@ -50,30 +51,54 @@
         line-height: 19px;
         letter-spacing: -0.00615385em;
     }
-    textarea {
+    .textarea-container {
         background-color: #F2F6FB;
         border-radius: 12px;
         height: 112px;
         
-        padding: 10px 15px;
+        padding: 10px 5px 10px 15px;
         width: 100%;
 
-        font-family: 'Raleway', sans-serif;
-        font-size: 14px;
-        line-height: 16px;
-        color: #484848;
+        textarea {
+            width: 100%;
+            height: 100%;
+            background-color: inherit;
+            font-family: 'Raleway', sans-serif;
+            font-size: 14px;
+            line-height: 16px;
+            color: #484848;
 
-        // Удаление обводки
-        outline: none;
-        -moz-appearance: none;
-        //border: 1px solid #999; /* указание этого свойства также удалит обводку в FireFox */
-        resize: none;
-        overflow: auto;
-
-        &::placeholder {
-            color: #9B9B9B;
+            // Стилизация для Mozilla
+            scrollbar-color: #C5C5C5 #F2F6FB;     /* «цвет ползунка» «цвет полосы скроллбара» */
+            scrollbar-width: thin;
+    
+            // Стилизация для Webkit
+            /* полоса прокрутки (скроллбар) */
+            &::-webkit-scrollbar {
+                width: 3px; /* ширина для вертикального скролла */
+                background-color: inherit;
+            }
+    
+            /* ползунок скроллбара */
+            &::-webkit-scrollbar-thumb {
+                margin-right: 10px;
+                background-color: #C5C5C5;
+                border-radius: 1px;
+            }
+    
+            // Удаление обводки
+            outline: none;
+            -moz-appearance: none;
+            resize: none;
+            overflow: auto;
+    
+            &::placeholder {
+                width: 95%;
+                color: #9B9B9B;
+            }
         }
     }
+    
     .send-complaint {
         cursor: pointer;
         display: block;

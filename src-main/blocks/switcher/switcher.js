@@ -1,4 +1,4 @@
-const switcher = document.querySelector('.switcher');
+const switcher = document.querySelector('.personal-info .switcher');
 const switcherBtns = switcher.querySelectorAll('.switcher__item');
 
 function hideElement (tag) {

@@ -1,81 +1,37 @@
 const filter = document.querySelector('.filters');
+const modalFilters = document.querySelector('.filters-modal');
 const grayImg = filter.querySelector('.gray-icon');
 const pinkImg = filter.querySelector('.pink-icon');
 const filterText = filter.querySelector('.filters__text');
+const closeFiltersBtn = modalFilters.querySelector('.btn-close-gray');
 
 // Открываем окно
 filter.addEventListener('click', () => {
-    console.log('clicked');
-    
+      
     grayImg.classList.add('hide');
     pinkImg.classList.remove('hide');
-    filterText.classList.add('active');
+	filterText.classList.add('active');
+	modalFilters.classList.remove('hide');
 });
 
 
-
-
-
-var inputLeft = document.getElementById("input-left");
-var inputRight = document.getElementById("input-right");
-
-var thumbLeft = document.querySelector(".slider > .thumb.left");
-var thumbRight = document.querySelector(".slider > .thumb.right");
-var range = document.querySelector(".slider > .range");
-
-function setLeftValue() {
-	var _this = inputLeft,
-		min = parseInt(_this.min),
-		max = parseInt(_this.max);
-
-	_this.value = Math.min(parseInt(_this.value), parseInt(inputRight.value) - 1);
-
-	var percent = ((_this.value - min) / (max - min)) * 100;
-
-	thumbLeft.style.left = percent + "%";
-	range.style.left = percent + "%";
+// Закрытие модального окна
+function closeModal() {
+	modalFilters.classList.add('hide');
+	grayImg.classList.remove('hide');
+    pinkImg.classList.add('hide');
+	filterText.classList.remove('active');
 }
-setLeftValue();
+closeFiltersBtn.addEventListener('click', closeModal);
 
-function setRightValue() {
-	var _this = inputRight,
-		min = parseInt(_this.min),
-		max = parseInt(_this.max);
-
-	_this.value = Math.max(parseInt(_this.value), parseInt(inputLeft.value) + 1);
-
-	var percent = ((_this.value - min) / (max - min)) * 100;
-
-	thumbRight.style.right = (100 - percent) + "%";
-	range.style.right = (100 - percent) + "%";
-}
-setRightValue();
-
-inputLeft.addEventListener("input", setLeftValue);
-inputRight.addEventListener("input", setRightValue);
-
-inputLeft.addEventListener("mouseover", function() {
-	thumbLeft.classList.add("hover");
-});
-inputLeft.addEventListener("mouseout", function() {
-	thumbLeft.classList.remove("hover");
-});
-inputLeft.addEventListener("mousedown", function() {
-	thumbLeft.classList.add("active");
-});
-inputLeft.addEventListener("mouseup", function() {
-	thumbLeft.classList.remove("active");
+modalFilters.addEventListener('click', (e) => {
+    if (e.target === modalFilters) {
+        closeModal();
+    }
 });
 
-inputRight.addEventListener("mouseover", function() {
-	thumbRight.classList.add("hover");
+document.addEventListener('keydown', (e) => {
+    if (e.code === "Escape" && !modalFilters.classList.contains('hide')) { 
+        closeModal();
+    }
 });
-inputRight.addEventListener("mouseout", function() {
-	thumbRight.classList.remove("hover");
-});
-inputRight.addEventListener("mousedown", function() {
-	thumbRight.classList.add("active");
-});
-inputRight.addEventListener("mouseup", function() {
-	thumbRight.classList.remove("active");
-}); 

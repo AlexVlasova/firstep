@@ -20,7 +20,7 @@ openModalBtn.addEventListener('click', () => {
         let target = elem.querySelector('input');
         target.checked = false;
     });
-})
+});
 
 // Закрытие модального окна
 function closeModal() {

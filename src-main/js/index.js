@@ -11,3 +11,4 @@ import '../blocks/profile/profile.js';
 import '../blocks/chat/chat.js';
 import '../blocks/complaint/complaint.js';
 import '../blocks/filters/filters.js';
+import '../blocks/filters-modal/filters-modal.js';

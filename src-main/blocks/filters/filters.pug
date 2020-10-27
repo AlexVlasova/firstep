@@ -1,42 +1,5 @@
-mixin switcher(a, b, c)
-    div(class="switcher")
-        div(class="switcher__item") 
-            .switcher-text= a
-        div(class="switcher__item switch-checked") 
-            .switcher-text= b
-        div(class="switcher__item") 
-            .switcher-text= c
-
 div(class="filters")
     .filters__icon
         img(class="gray-icon" src="/assets/img/filters.svg", alt="Иконка фильтра")
         img(class="pink-icon hide" src="/assets/img/filters-active.svg", alt="Иконка фильтра")
     .filters__text Фильтры
-    div(class="filters__container hide")
-        button.btn-close-gray
-        .display-for-me
-            p Показывать мне
-            +switcher('Мужчин','Женщин','Всех')
-        .age
-            p Возраст
-            div(class="age-slider" id="age")
-                input(type="range" id="input-left" min="0" max="100" value="25")
-                input(type="range" id="input-right" min="0" max="100" value="50")
-                .slider
-                    .track
-                    .range
-                    div(class="thumb left")
-                    div(class="thumb right")
-        .display-me-to-other
-            p Показывать меня в поиске
-            +switcher('Мужчинам','Женщинам','Всем')
-        .distance
-            p Удаленость от меня 
-            div(class="distance-slider" id="dist")
-                input(type="range" id="input-left" min="0" max="100" value="0")
-                input(type="range" id="input-right" min="0" max="100" value="25")
-                .slider
-                    .track
-                    .range
-                    div(class="thumb left")
-                    div(class="thumb right")

@@ -16,6 +16,7 @@ html(lang='ru')
       include ./blocks/messages/messages
       include ./blocks/invites/invites
     div(class="other-persons")
+      include ./blocks/filters-modal/filters-modal
       include ./blocks/complaint/complaint
       include ./blocks/header/header
       .card-container
@@ -31,7 +32,3 @@ html(lang='ru')
           include ./blocks/profile/profile
     script(defer src="/js/main.js")
     script(defer src="/js/vendors.js")
-
-    //- script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" crossorigin="anonymous")
-    //- link(rel="stylesheet", href="//cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.min.css")
-    //- script(src="//cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.concat.min.js")

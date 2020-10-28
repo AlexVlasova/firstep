@@ -5,3 +5,8 @@ mixin message-gray(type, text)
 mixin message-pink(type, text)
     div(class="message-pink "+ type)
         .message= text
+
+mixin dropdown(type, elems)
+    ul(class="dropdown-container "+ type)
+        each elem in elems
+            li= elem

@@ -1,3 +1,16 @@
+.photo-slider {
+	position: relative;
+	cursor: none;
+
+	.cursor {
+		pointer-events: none;
+		position: absolute;
+		width: 46px;
+		height: 46px;
+		z-index: 20;
+	}
+}
+
 .frame {
 	width: 100%;
 	position: relative;
@@ -19,7 +32,6 @@
 			color: #ddd;
 			border-radius: 18px 0px 0px 18px;
 			text-align: center;
-			cursor: pointer;
 
 			background-repeat: no-repeat;
 			background-position: center center;

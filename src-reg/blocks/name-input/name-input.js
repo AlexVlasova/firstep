@@ -25,8 +25,15 @@ const btnNameNext = document.querySelector('.send-name');
 const nameMessage = document.querySelector('.name-message .message');
 const welcomeMessage = document.querySelector('.welcome-message .message');
 
+function hideNameInput() {
+    btnNameNext.classList.add('hide');
+    nameInput.classList.add('hide');
+}
+
 // Сохраняем введенное имя
 btnNameNext.addEventListener('click', () => {
+    hideNameInput();
+
     let value = inputTextName.value;
     nameMessage.textContent = value;
 

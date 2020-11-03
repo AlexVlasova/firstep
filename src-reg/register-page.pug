@@ -17,13 +17,8 @@ html(lang='ru')
         .register-chat
             include ./blocks/choose-enter/choose-enter
             include ./blocks/phone-number/phone-number
-            +message-pink('confirm ', '+7 905-205-65-66')
-            +message-gray('confirm ', 'Сейчас на твой номер придет код, введи его в поле ниже')
             include ./blocks/code-input/code-input
-            +message-pink('person-info ', '111111')
-            +message-gray('person-info ', 'А теперь познакомимся. Напиши свое имя')
-            input(type="text" class="name-input")
-            button(class="name send-name ") Далее
+            include ./blocks/name-input/name-input
             +message-pink('name ', 'Ян')
             +message-gray('sex', 'Приятно познакомиться, Ян. Теперь выбери свой пол')
             button(class="sex-male ") Я мужчина

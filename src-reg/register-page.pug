@@ -15,19 +15,8 @@ html(lang='ru')
         .register-header
             img(src="/assets/img/logo.svg", alt="Firstep")
         .register-chat
-            +message-gray('', 'Привет!')
-            +message-gray('', 'Давай выберем способ авторизации в приложении (Нажми на одну из кнопок ниже)')
-            button.phone-btn 
-                img(src="/assets/img/icon-phone.svg", alt="")
-                p Номер телефона
-            button.fb-btn 
-                img(src="/assets/img/icon-fb.svg", alt="")
-                p Facebook
-            +message-pink('phone ', 'По номеру телефона')
-            +message-gray('phone ', 'Введи свой номер телефона')
-            div(class="phone-input phone ")
-              input(type="tel" id="phone" name="phone" class="phone phone-input " placeholder="Введи номер телефона" autocomplete="off")
-            button(class="phone confirm-phone " id="confirm-phone") Подтвердить
+            include ./blocks/choose-enter/choose-enter
+            include ./blocks/phone-number/phone-number
             +message-pink('confirm ', '+7 905-205-65-66')
             +message-gray('confirm ', 'Сейчас на твой номер придет код, введи его в поле ниже')
             include ./blocks/code-input/code-input

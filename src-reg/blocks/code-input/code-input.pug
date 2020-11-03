@@ -1,7 +1,13 @@
-div(class="code-input hide")
++message-pink('confirm ', '+7 905-205-65-66')
++message-gray('confirm ', 'Сейчас на твой номер придет код, введи его в поле ниже')
+div(class="code-input ")
     input(type="number" name="code" class="code-input__number" autocomplete="off" tabindex=1)
     input(type="number" name="code" class="code-input__number" autocomplete="off" tabindex=2)
     input(type="number" name="code" class="code-input__number" autocomplete="off" tabindex=3)
     input(type="number" name="code" class="code-input__number" autocomplete="off" tabindex=4)
     input(type="number" name="code" class="code-input__number" autocomplete="off" tabindex=5)
     input(type="number" name="code" class="code-input__number" autocomplete="off" tabindex=6)
+div(class="code-input__timer")
+    span Код придёт в течение 
+    span.pink 0:
+    span(class="pink seconds") 59

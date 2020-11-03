@@ -44,8 +44,9 @@ h2 {
 } 
 
 // Pages
-@import "../../assets/scss/modules/register-page";
-@import "../../blocks/code-input/code-input";
+@import "../../assets/scss/modules/register-page.scss";
+@import "../../blocks/code-input/code-input.scss";
+@import "../../blocks/name-input/name-input.scss";
 @import "../../blocks/phone-number/phone-number.scss";
 @import "../../blocks/phone-number/intlTelInput.scss";
 @import "../../blocks/input-img/input-img.scss";

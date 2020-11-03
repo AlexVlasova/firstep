@@ -254,26 +254,3 @@ $mobilePopupMargin: 30px !default;
     line-height: 1.5em;
   }
 }
-
-
-
-
-
-
-@import "./sprite";
-
-.iti__flag {
-  height: $flagHeight;
-  box-shadow: 0px 0px 1px 0px #888;
-  // empty state
-  background-color: #DBDBDB;
-  background-position: $flagWidth 0;
-}
-
-
-
-// hack for Nepal which is the only flag that is not square/rectangle, so it has transparency, so you can see the default grey behind it
-.iti__flag.iti__np {
-  background-color: transparent;
-}
-

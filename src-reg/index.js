@@ -6,6 +6,7 @@ import './js/index';
 import './js/init-firebase';
 import './blocks/code-input/code-input';
 import './blocks/name-input/name-input';
+import './blocks/input-img/input-img';
 import './blocks/gender-input/gender-input';
 import './blocks/date-input/date-input';
 import './blocks/choose-enter/choose-enter';

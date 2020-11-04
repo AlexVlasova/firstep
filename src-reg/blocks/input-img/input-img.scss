@@ -3,6 +3,7 @@
     z-index: 10;
 
     margin: 25px auto;
+    margin-bottom: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,4 +39,34 @@
     //     outline: 1px solid #0078d7;
     //     outline: -webkit-focus-ring-color auto 5px;
     // }
+}
+
+.photo-input__descr {
+    max-width: 215px;
+    align-self: center;
+
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+
+    color: #8E8E8E;
+}
+
+.photos-download {
+    display: flex;
+    justify-content: center;
+
+
+    .photo-box {
+        width: 120px;
+        height: 120px;
+        margin: 10px;
+        border-radius: 12px;
+        background-color: red;
+
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
 }

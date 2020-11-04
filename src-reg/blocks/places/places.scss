@@ -1,0 +1,39 @@
+.places-input {
+    align-self: center;
+    width: 320px;
+
+    .select__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &::after {
+            display: none;
+        }
+
+        .select__input {
+            flex: 1 0 auto;
+        }
+    }
+
+    .select__list {
+        padding: 10px 20px;
+    }
+
+    .places-input__clear {
+        cursor: pointer;
+        width: 14px;
+        height: 14px;
+        background-color: #8E8E93;
+        opacity: 0.5;
+        border-radius: 50%;
+        background-image: url('/assets/img/btn-white-cross.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+    }
+
+    .select__item {
+        border-bottom: 1px solid rgba(233, 233, 233, 0.62);
+    }
+}

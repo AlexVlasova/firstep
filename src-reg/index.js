@@ -10,6 +10,7 @@ import './blocks/input-img/input-img';
 import './blocks/gender-input/gender-input';
 import './blocks/date-input/date-input';
 import './blocks/choose-enter/choose-enter';
+import './blocks/places/places';
 
 // SCSS
 import './assets/scss/main.scss';

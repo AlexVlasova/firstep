@@ -1,7 +1,7 @@
 
 
 jQuery(($) => {
-    $('.select').on('click', '.select__head', function () {
+    $('.day-select').on('click', '.select__head', function () {
         if ($(this).hasClass('open')) {
             $(this).removeClass('open');
             $(this).next().fadeOut();
@@ -13,7 +13,7 @@ jQuery(($) => {
         }
     });
 
-    $('.select').on('click', '.select__item', function () {
+    $('.day-select').on('click', '.select__item', function () {
         $('.select__head').removeClass('open');
         $(this).parent().fadeOut();
         $(this).parent().prev().text($(this).text());

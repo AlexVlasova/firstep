@@ -1,14 +1,14 @@
 +message-pink('gender-message ', 'Мужчина')
 +message-gray('date ', 'Введи дату рождения')
 div(class="date-input")
-    div(class="date-input__date select")
+    div(class="date-input__date select day-select")
         input(type="hidden" class="select__input" name="")
         .select__head День
         - var day = 1;
         ul(class="select__list ")
             while day < 32
                 li.select__item= day++
-    div(class="date-input__month select")
+    div(class="date-input__month select day-select")
         input(type="hidden" class="select__input" name="")
         .select__head Месяц
         ul(class="select__list ")
@@ -24,7 +24,7 @@ div(class="date-input")
             li.select__item Октябрь
             li.select__item Ноябрь
             li.select__item Декабрь
-    div(class="date-input__year select")
+    div(class="date-input__year select day-select")
         input(type="hidden" class="select__input" name="")
         .select__head Год
         - var year = 1960;

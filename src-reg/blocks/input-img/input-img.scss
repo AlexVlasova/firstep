@@ -1,6 +1,6 @@
 .input-img {
     position: relative;
-    z-index: 10;
+    z-index: 5;
 
     margin: 25px auto;
     margin-bottom: 5px;
@@ -40,6 +40,21 @@
     //     outline: -webkit-focus-ring-color auto 5px;
     // }
 }
+.input-img__empty {
+    width: 120px;
+    height: 120px;
+    margin: 10px;
+
+    label {
+        width: 100px;
+        height: 100px;
+        border-radius: 11px;
+        background-color: #F1F1F1;
+        background-image: url('/assets/img/gray-cross.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+}
 
 .photo-input__descr {
     max-width: 215px;
@@ -56,7 +71,7 @@
 .photos-download {
     display: flex;
     justify-content: center;
-
+    align-items: center;
 
     .photo-box {
         width: 120px;
@@ -69,4 +84,21 @@
         background-position: center center;
         background-size: cover;
     }
+
+    &.vertical {
+        flex-direction: column;
+        align-items: flex-end;
+
+        .photo-box {
+            width: 220px;
+            height: 220px;
+            margin: 8px;
+        }
+    }
 }
+
+
+// .input-img.dragover {
+//     background-color: #fafafa;
+//     outline-offset: -17px;
+// }

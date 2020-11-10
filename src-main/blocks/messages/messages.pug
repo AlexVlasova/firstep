@@ -5,6 +5,6 @@ include ../invite-aside/invite-aside.pug
     .empty-messages__img
         img(src="/assets/img/purple-girl.svg" alt="")
     .empty-messages__text У тебя пока нет чатов. Принятые приглашения будут появляться здесь в виде чатов
-.messages
+div(class="messages hide")
     +message("Артем, 25", "Привет. Я за 11 столиком, жду...", "5")
     +message("Сергей, 22", "Привет)) очень люблю", "2")

@@ -15,6 +15,7 @@ html(lang='ru')
       include ./blocks/switcher/switcher
       include ./blocks/messages/messages
       include ./blocks/invites/invites
+      include ./blocks/nav/nav
     div(class="other-persons")
       include ./blocks/filters-modal/filters-modal
       include ./blocks/complaint/complaint
@@ -24,6 +25,7 @@ html(lang='ru')
           img(src="/assets/img/problem-man.svg", alt="")
           p Включите голокацию чтобы увидеть пользователей рядом с вами и знакомиться
         include ./blocks/person-card/person-card
+        include ./blocks/support/support
     div(class="chat-container hide")
       include ./blocks/chat/chat
       .aside-container

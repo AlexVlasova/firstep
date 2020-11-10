@@ -3,6 +3,15 @@
     margin: 0 20px;
     border-bottom: 1px solid $borderColor;
 
+    &__back-btn {
+        width: 12px;
+        margin-right: 20px;
+        background-color: #fff;
+        background-image: url('/assets/img/pink-arrow.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
     &__photo {
         width: 48px;
         height: 48px;

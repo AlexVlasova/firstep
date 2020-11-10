@@ -1,0 +1,43 @@
+.support {
+    padding: 20px 50px;
+    margin-top: 30px;
+    align-self: flex-start;
+    width: 600px;
+    background-color: #FBF5F3;
+    border-radius: 27px;
+
+    &__header {
+        margin-bottom: 25px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 12px;
+        color: #FF4D67;
+    }
+}
+
+.button {
+    display: flex;
+    margin-bottom: 15px;
+    padding: 0 20px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 17px;
+
+    .right {
+        display: flex;
+
+        img {
+            width: 8px;
+            height: auto;
+            margin-left: 23px;
+            transform: rotate(180deg);
+
+            &.disabled svg {
+                fill:gray;
+            }
+        }
+    }
+}

@@ -12,3 +12,5 @@ import '../blocks/chat/chat.js';
 import '../blocks/complaint/complaint.js';
 import '../blocks/filters/filters.js';
 import '../blocks/filters-modal/filters-modal.js';
+import '../blocks/nav/nav.js';
+import '../blocks/support/support.js';

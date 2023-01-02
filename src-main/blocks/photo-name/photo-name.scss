@@ -1,0 +1,23 @@
+.photo-name {
+    display: flex;
+    border-bottom: 1px solid $borderColor;
+
+    &__photo {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        margin: 15px 0;
+        margin-right: 16px;
+        background-image: url(/assets/img/person.jpg);
+        background-size: cover;
+    }
+    
+    &__name {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 23px;
+        margin-top: 20px;
+    
+        font-feature-settings: 'pnum' on, 'lnum' on;
+    }
+}

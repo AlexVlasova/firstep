@@ -1,0 +1,11 @@
+mixin invite(name, place, time)
+    .invite-aside
+        .invite-aside__photo
+        .invite-aside__message
+            .invite-aside__name= name
+            .invite-aside__place Приглашает вас в 
+                span.place-pink= place
+            .invite-aside__time
+                img(src="/assets/img/icon-watch.svg", alt="")
+                span На ответ осталось 
+                    span.time= time

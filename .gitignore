@@ -1,0 +1,28 @@
+# Default
+.gulp
+.idea
+.vscode
+.jshintrc
+
+package-lock.json
+webpack.dev.conf.js
+# Node
+node_modules
+dist
+
+# BD, logs
+*.log
+*.sql
+*.sqlite
+
+# Other
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+yarn.lock
+
+# Special
+Thumbs.db
+Desktop.ini
+.DS_Store*
+ehthumbs.db

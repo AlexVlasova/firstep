@@ -1,0 +1,31 @@
+.main-page {
+    display: flex;
+}
+.personal-info {
+    flex: 357px 0 0;
+    height: 100vh;
+    padding: 0 20px;
+    border-right: 1px solid #E1E1E1;
+
+    .switcher {
+        margin-top: 15px;
+    }
+    .empty-messages {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+.other-persons {
+    flex: auto 1 1;
+
+    display: flex;
+    flex-direction: column;
+
+    .card-container {
+        flex: auto 1 1;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
